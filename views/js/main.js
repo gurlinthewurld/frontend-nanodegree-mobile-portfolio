@@ -525,8 +525,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  /* Changing the value for the number of iterations from 200 to 12 means the engine doesn't have to load images that are not actually loading the screen, thus improving performance significantly */
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
