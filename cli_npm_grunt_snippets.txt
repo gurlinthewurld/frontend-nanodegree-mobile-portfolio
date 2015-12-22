@@ -1,0 +1,29 @@
+2963  git clone git@github.com:gurlinthewurld/grunt-workflow-guide.git
+2964  cd grunt-workflow-guide/
+2965  git checkout 6719c2c550c14b0c11cff5d69e45aa23ab0f5188
+2966  ls -la
+2967  ls src/
+2968  which npm
+2969  npm install grunt-cli
+2970  npm init
+2971  npm install --save-dev grunt
+2972  touch Gruntfile.js
+2973  atom .
+2974  npm install --save-dev grunt-sass
+2975  ls src
+2976  pwd
+2977  ls
+2978  npm install --save-dev grunt-contrib-concat
+2979  npm install --save-dev grunt-contrib-concat --force
+2980  npm install --save-dev load-grunt-tasks
+2981  npm install --save-dev load-grunt-tasks --force
+2982  touch Gruntfile.yml
+2983  npm install --save-dev grunt-congig-jshint
+2984  npm install --save-dev grunt-config-jshint
+2985  npm install grunt-contrib-jshint --save-dev
+2986  grunt
+2987  grunt --force
+2988  ls
+2989  git status
+2990  ls node_modules/
+2991  history
