@@ -447,7 +447,8 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.getElementsByClassName(".randomPizzaContainer").length; i++) {
+    var items =  document.getElementsByClassName(".randomPizzaContainer");
+    for (var i = 0; i < items.length; i++) {
       var dx = determineDx(document.getElementsByClassName(".randomPizzaContainer")[i], size);
       var newwidth = (document.getElementsByClassName(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.getElementsByClassName(".randomPizzaContainer")[i].style.width = newwidth;
@@ -501,11 +502,7 @@ function updatePositions() {
 
   var items = document.getElementsByClassName('.mover');
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 3));
-    /*
-      Modulo gives us the remainder when we divide i by 5, or i by 3.
-      Therefore we are calculating the same set of 5 numbers for all of our pizzas no matter how big our list of pizzas are!
-    */
+    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 

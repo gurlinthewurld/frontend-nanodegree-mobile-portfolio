@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTask('grunt-contrib-cssmin');
     grunt.loadNpmTasks('load-grunt-tasks');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-inline-css');
 
 
     // Project configuration.
@@ -48,6 +49,24 @@ module.exports = function(grunt) {
             src: ['img/*.{gif,GIF,jpg,JPG,png,PNG}'],
             dest: 'dist/'
           }]
+        },
+        imagemin: {
+        dynamic: {
+          files: [{
+            expand: true,
+            cwd: 'src/images',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'dist/'
+          }]
+        },
+        inlinecss: {
+        main: {
+          options: {
+          },
+          files: {
+            'index.html': 'in.html'
+            }
+          }
         }
       }
       }
@@ -80,6 +99,6 @@ module.exports = function(grunt) {
 	}); // for grunt.initConfig()
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'uglify', 'responsive_images','concat', 'imagemin', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'responsive_images','concat', 'imagemin', 'cssmin', 'inline_css']);
 
 };
