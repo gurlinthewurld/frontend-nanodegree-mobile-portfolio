@@ -411,6 +411,9 @@ var resizePizzas = function(size) {
       case "2":
         document.querySelector("#pizzaSize").innerHTML = "Medium";
         return;
+      case "3":
+        document.querySelector("#pizzaSize").innerHTML = "Large";
+        return;
       default:
         console.log("bug in changeSliderLabel");
     }
@@ -447,11 +450,11 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    var items =  document.getElementsByClassName(".randomPizzaContainer");
+    var items =  document.getElementsByClassName("randomPizzaContainer");
     for (var i = 0; i < items.length; i++) {
-      var dx = determineDx(document.getElementsByClassName(".randomPizzaContainer")[i], size);
-      var newwidth = (document.getElementsByClassName(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.getElementsByClassName(".randomPizzaContainer")[i].style.width = newwidth;
+      var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
+      var newwidth = (document.getElementsByClassName("randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+      document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
     }
   }
 
@@ -500,7 +503,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.getElementsByClassName('.mover');
+  var items = document.getElementsByClassName('mover');
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -524,7 +527,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   /* Changing the value for the number of iterations from 200 to 12 means the engine doesn't have to load images that are not actually loading the screen, thus improving performance significantly */
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 24; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
