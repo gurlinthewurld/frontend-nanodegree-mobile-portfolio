@@ -47,25 +47,16 @@ module.exports = function(grunt) {
           files: [{
             expand: true,
             cwd: 'src/images',
-            src: ['img/*.{gif,GIF,jpg,JPG,png,PNG}'],
-            dest: 'dist/'
-          }]
-        },
-        imagemin: {
-        dynamic: {
-          files: [{
-            expand: true,
-            cwd: 'src/images',
             src: ['**/*.{png,jpg,gif}'],
             dest: 'dist/'
           }]
         },
-        inlinecss: {
+        inline_css: {
         main: {
           options: {
           },
           files: {
-            'index.html': 'in.html'
+            'index.html': 'index.html'
             }
           }
         }

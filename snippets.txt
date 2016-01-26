@@ -1,1 +1,18 @@
-I will be updating this file with questions. 
+Questions:
+
+These are the commands I ran in my directory path: /p4_web_optimization/frontend-nanodegree-mobile-portfolio
+
+npm install --save-dev grunt-contrib-jshint
+npm install --save-dev grunt-contrib-uglify
+npm install --save-dev grunt-contrib-concat
+npm install --save-dev grunt-contrib-imagemin
+npm install --save-dev grunt-contrib-cssmin
+npm install --save-dev load-grunt-tasks
+npm install --save-dev grunt-responsive-images
+npm install --save-dev grunt-inline-css
+grunt --force
+
+
+I am still not seeing a dist folder - Do I have to manually create that?
+
+I am not sure about the format of specs, src and dest directory paths, etc., and all code in my Gruntfile.js
