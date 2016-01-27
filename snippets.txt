@@ -19,7 +19,8 @@ I am not sure about the syntax, src and dest directory paths, etc., and all code
 
 So far I am only working with imagemin
 
-How do I get the src to be both views/images AND img ?
+How do I get the cwd to be both views/images AND img ?
+How to identify the src and dest?
 
-I managed to optimize images which I place in the dist folder:
-How do I get the optimized images to be read by the project?
+I managed to optimize the views/images folder to the dist folder:
+How do I get the optimized images to be read by the project? Do I set dest to the views/images? Do I manually place them?
