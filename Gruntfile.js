@@ -1,28 +1,21 @@
 module.exports = function(grunt) {
-    require('load-grunt-tasks')(grunt);
-    // Load the plugins that provide the tasks.
-
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-
-
-
-    // Project configuration.
+  // Load JSHint task
+  grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-        imagemin: {
-        dynamic: {
-          files: [{
-            expand: true,
-            cwd: 'views/images',
-            src: ['**/*.{png,jpg,gif}'],
-            dest: 'dist/'
-                }]
-              }
-            }
-    });
+      uglify: {
+          scripts: {
+              expand: true,
+              src: ['js/*.js', 'views/js/*.js'],
+              dest: 'dist',
+              ext: '.min.js'
+          }
+      }
+  });
 
-    // Default task(s).
-    grunt.registerTask('default', [
-      'imagemin'
-    ]);
+
+  // Default task.
+  grunt.registerTask('default', 'uglify');
+
+
 };

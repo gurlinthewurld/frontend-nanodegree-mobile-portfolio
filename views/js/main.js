@@ -415,9 +415,10 @@ var resizePizzas = function(size) {
         document.querySelector("#pizzaSize").innerHTML = "Large";
         return;
       default:
-        console.log("bug in changeSliderLabel");
+          console.log("bug in changeSliderLabel");
+      }
     }
-  }
+
 
   changeSliderLabel(size);
 
@@ -463,7 +464,7 @@ var resizePizzas = function(size) {
   // User Timing API is awesome
   window.performance.mark("mark_end_resize");
   window.performance.measure("measure_pizza_resize", "mark_start_resize", "mark_end_resize");
-  var timeToResize = window.performance.getEntriesByName("measure_pizza_resize");
+  var timeToResize = //window.performance.getEntriesByName("measure_pizza_resize");
   console.log("Time to resize pizzas: " + timeToResize[0].duration + "ms");
 };
 
@@ -526,7 +527,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  /* Changing the value for the number of iterations from 200 to 12 means the engine doesn't have to load images that are not actually loading the screen, thus improving performance significantly */
+  /* Changing the value for the number of iterations from 200 to 24 means the engine doesn't have to load images that are not actually loading the screen, thus improving performance significantly */
   for (var i = 0; i < 24; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';

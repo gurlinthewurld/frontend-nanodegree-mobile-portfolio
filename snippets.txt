@@ -24,3 +24,5 @@ How to identify the src and dest?
 
 I managed to optimize the views/images folder to the dist folder:
 How do I get the optimized images to be read by the project? Do I set dest to the views/images? Do I manually place them?
+
+Where do I put the minified code in the project?
