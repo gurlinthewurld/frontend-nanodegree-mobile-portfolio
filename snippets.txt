@@ -13,6 +13,13 @@ npm install --save-dev grunt-inline-css
 grunt --force
 
 
-I am still not seeing a dist folder - Do I have to manually create that?
+I created a dist folder
 
-I am not sure about the format of specs, src and dest directory paths, etc., and all code in my Gruntfile.js
+I am not sure about the syntax, src and dest directory paths, etc., and all code in my Gruntfile.js
+
+So far I am only working with imagemin
+
+How do I get the src to be both views/images AND img ?
+
+I managed to optimize images which I place in the dist folder:
+How do I get the optimized images to be read by the project?
