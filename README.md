@@ -15,6 +15,12 @@ The purpose of this repository is to exemplify how to take a developer's code on
 
 In the example portfolio in this project, we optimize PageSpeed Insights score for index.html. To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
+### Optimizing main.js
+
+* line 467 - Uncommented line as the next line is accessing the first entry of the list timeToResize which is formed by the elements of name measure_pizza_resize
+* line 509 - Caching document.body.scrollTop in a variable outside of the loop: each time you scroll, updatePositions() function is called and this loop is run. Each item in this loop is querying the DOM - at a particular instant of scroll document.body.scrollTop has same value for all the items. You can verify it by console.log(document.body.scrollTop)
+* line 456 - Calculate the amount by which one pizza changes its size and applying the same effect to all the pizzas instead of calculating for each pizza and then apply on each.Also, there are certain instances of repetitive code like document.getElementsByClassName("randomPizzaContainer").You have already stored it in a variable so it is better to use that variable rather than querying the DOM again and again to fetch the randomPizzaContainer nodes.
+
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
 ### Further Optimization Tips and Tricks
